@@ -1,11 +1,29 @@
+<script>
+    import { onMount } from "svelte";
 
+    onMount(() => {
+        const newsletter = document.querySelector("#newsletter");
+        if (!newsletter) return;
 
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        newsletter.classList.remove("opacity-0", "translate-y-10");
+                        newsletter.classList.add("opacity-100", "translate-y-0");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.2 } // Triggers when 20% is visible
+        );
 
-
+        observer.observe(newsletter);
+    });
+</script>
 
 <footer class="bg-[#CDEAFF]">
-    <!-- Newsletter Section -->
-    <div class="py-16 px-4">
+    <div id="newsletter" class="py-16 px-4 opacity-0 translate-y-10 transition-all duration-700">
         <div class="max-w-6xl mx-auto">
             <div class="bg-[#FEFCE8] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
                 <!-- Left Side: Newsletter Heading & Social Icons -->
@@ -14,15 +32,14 @@
                     <h2 class="text-[#003580] text-2xl md:text-3xl font-bold leading-tight">
                         Fancy receiving the latest <br class="hidden md:block">scoop straight to your inbox?
                     </h2>
-                    <!-- Social Icons -->
                     <div class="flex space-x-3">
-                        <a href="https://www.instagram.com" aria-label="Instagram" class="text-[#003580] hover:text-[#001f4d]">
+                        <a href="https://www.instagram.com" aria-label="Instagram">
                             <img src="/instagram.svg" alt="Instagram" class="w-6 h-6">
                         </a>
-                        <a href="https://www.facebook.com" aria-label="Facebook" class="text-[#003580] hover:text-[#001f4d]">
+                        <a href="https://www.facebook.com" aria-label="Facebook">
                             <img src="/facebook.svg" alt="Facebook" class="w-6 h-6">
                         </a>
-                        <a href="https://www.linkedin.com" aria-label="LinkedIn" class="text-[#003580] hover:text-[#001f4d]">
+                        <a href="https://www.linkedin.com" aria-label="LinkedIn">
                             <img src="linkdin.svg" alt="LinkedIn" class="w-6 h-6">
                         </a>
                     </div>
@@ -43,6 +60,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Main Footer Section -->
     <div class="bg-[#CDEAFF] px-6 py-12">
@@ -114,16 +132,21 @@
 
     
      <!-- Bottom Section -->
-     <div class="bg-[#003580] text-white text-center py-4 text-sm">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-            <div class="flex flex-wrap gap-4">
-                <a href="#" class="hover:underline">Privacy policy</a>
-                <a href="#" class="hover:underline">Trading Terms</a>
-                <a href="#" class="hover:underline">Terms of use</a>
-                <a href="#" class="hover:underline">GDPR</a>
-            </div>
-            <p>© 2025 New Forest Ice Cream Ltd. Registered in England & Wales. Company No: 2522236.</p>
+<div class="bg-[#003580] text-white text-center py-4 text-sm">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-6 space-y-3 md:space-y-0">
+        <!-- Links -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline">Trading Terms</a>
+            <a href="#" class="hover:underline">Terms of Use</a>
+            <a href="#" class="hover:underline">GDPR</a>
         </div>
+
+        <!-- Copyright Text -->
+        <p class="text-xs md:text-sm text-gray-200">
+            © 2025 New Forest Ice Cream Ltd. Registered in England & Wales. Company No: 2522236.
+        </p>
     </div>
+</div>
 
 </footer>

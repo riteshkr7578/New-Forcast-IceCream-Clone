@@ -25,11 +25,11 @@
 <section class="relative w-full flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start overflow-hidden min-h-screen">
     
     <!-- Background Image -->
-    <div class="relative w-full md:w-full h-[50vh] md:h-screen">
+    <div class="relative w-full md:w-full h-[50vh] md:h-screen sm:h-auto">
         <img 
             src="/oldimg.jpg" 
             alt="New Forest History" 
-            class="w-full h-full object-fill"
+            class="w-full h-full object-fill sm:aspect-auto"
         />
     </div>
 
