@@ -19,9 +19,9 @@
     <nav class="container mx-auto flex items-center justify-between py-4 px-6 md:px-12">
       <!-- Left Links -->
       <ul class="hidden md:flex space-x-16 text-blue-900 font-bold">
-        <li><a href="/products" class="hover:text-blue-700 transition text-2xl">Products</a></li>
-        <li><a href="/trade" class="hover:text-blue-700 transition text-2xl">Trade</a></li>
-        <li><a href="/about" class="hover:text-blue-700 transition text-2xl">About</a></li>
+        <li><a href="/#" class="hover:text-blue-700 transition text-2xl">Products</a></li>
+        <li><a href="/#" class="hover:text-blue-700 transition text-2xl">Trade</a></li>
+        <li><a href="/#" class="hover:text-blue-700 transition text-2xl">About</a></li>
       </ul>
   
       <!-- Logo (Centered) -->

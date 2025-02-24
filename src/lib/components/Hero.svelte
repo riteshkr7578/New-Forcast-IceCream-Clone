@@ -17,7 +17,7 @@
         <img 
             src="/icecream.jpg" 
             alt="New Forest Ice Cream" 
-            class="w-full h-full object-fill "
+            class="w-full h-full object-fit"
         />
     </div>
   
@@ -31,12 +31,12 @@
                 SCOOP UP HAPPINESS WITH
             </p>
   
-            <h1 class="text-4xl md:text-6xl font-extrabold my-4"
+            <h1 class="text-4xl md:text-5xl  font-extrabold  my-4"
                 transition:fly="{{ y: 40, opacity: 0, duration: 1400, easing: cubicOut }}">
                 New Forest Ice Cream
             </h1>
   
-            <p class="text-lg md:text-xl text-blue-900 max-w-2xl mx-auto leading-relaxed"
+            <p class="text-lg md:text-xl text-blue-900 max-w-2xl mx-auto leading-relaxed font-bold text-center"
                 transition:fly="{{ y: 30, opacity: 0, duration: 1600, easing: cubicOut }}">
                 We’ve been whipping up smiles since 1983 with our award-winning, nut-free ice cream, sorbets, and desserts.
                 Both real dairy ice cream and plant-based treats, and everything in between. Because we’re making the world a cooler place.
