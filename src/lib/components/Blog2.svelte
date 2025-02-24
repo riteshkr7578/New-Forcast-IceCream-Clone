@@ -50,8 +50,8 @@
                 transition:fly={{ y: 50, opacity: 0, duration: 1300, easing: cubicOut }}
             >
                 <img src="/ice2.jpg" alt="Dairy Turkish Delight" class="w-full h-70 object-cover rounded-3xl">
-                <div class="absolute inset-0 bg-opacity-30 flex justify-center mb-0">
-                    <h1 class="text-white text-lg md:text-5xl font-bold">Dairy Turkish Delight</h1>
+                <div class="absolute inset-0 bg-opacity-30 flex justify-start mt-50 ml-5">
+                    <h1 class="text-white text-lg md:text-3xl font-bold">Dairy Turkish Delight</h1>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 space-x-4 h-80">
